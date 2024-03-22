@@ -1,0 +1,19 @@
+@property --alpha {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1;
+}
+.button {
+  --alpha: 0.5;
+  background: linear-gradient(rgba(255,0,0,var(--alpha)), rgba(255,255,0,var(--alpha))) transparent;
+  border-radius: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  transition: --alpha 1s;
+}
+.button:hover {
+  --alpha: 1;
+}
